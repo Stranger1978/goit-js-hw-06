@@ -15,12 +15,25 @@ const images = [
 
 const listEl = document.querySelector('.gallery');
 
-const createList = images.map((image) => '<li><img src= ${image.url} alt= ${image.alt}></img></li>')
-  .join("");
-  console.log(listEl);
-listEl.insertAdjacentHTML("beforeend", createList);
-listEl.style.display = "flex-box";
+listEl.style.display = "flex";
 listEl.style.listStyleType = "none";
-listEl.style.gap = "20px";
+
+const createList = images.map((image) => `<li><img src= "${image.url}" alt= "${image.alt}"></img></li>`)
+  .join("");
   
+listEl.insertAdjacentHTML("beforeend", createList);
+  
+const imagesEl = listEl.querySelectorAll('img');
+imagesEl.forEach(img => {
+img.classList.add("image")
+
+img.style.width = "450px";
+img.style.height = "450px";
+img.style.marginLeft = "50px";
+
+});
+
+
+
+
  
