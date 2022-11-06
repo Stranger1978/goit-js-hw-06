@@ -5,7 +5,7 @@ inputValue.addEventListener('blur', onInputBlor)
 
 function onInputBlor (event) {
     let inputValueLength = event.currentTarget.value.split("").length;
-   // console.log(validLength, inputValueLength);
+   
 
 if (inputValueLength === validLength) {
     inputValue.classList.remove('invalid');
