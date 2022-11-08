@@ -13,5 +13,6 @@ for (const ingredient of ingredients) {
 const createLi = document.createElement("li");
 createLi.textContent = ingredient;
 createLi.classList.add("item");
-listEl.append(createLi);  
+  
 }
+listEl.append(createLi);
